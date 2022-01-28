@@ -4,8 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio HTML 1</title>
+    <title>Ejercicio Formularios HTML</title>
   </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Formulario</legend>
 
-  <body></body>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="nombre" autofocus required>
+
+        <label for="email_direction">Correo electrónico</label>
+        <input type="email" id="email_direction" name="correo">
+
+        <label for="url_direction">URL</label>
+        <input type="url" id="url_direction" name="URL" placeholder="Escribe la URL de tu página web personal">
+
+        <label for="user_date">Fecha y hora</label>
+        <input type="datetime-local" id="user_date" name="fecha">
+
+        <label for="user_month">Mes</label>
+        <input type="month" id="user_month" name="mes">
+
+        <label for="user_week">Semana</label>
+        <input type="week" id="user_month" name="semana">
+
+        <label for="user_number">Número</label>
+        <input type="number" min="-10" max="10" name="numero">
+
+        <label for="phone_number">Teléfono</label>
+        <input type="tel" id="phone_number" name="telefono" value="123456789" readonly>
+
+        <label for="search_term">Término de búsqueda</label>
+        <input type="search" id="search_term" name="termino" disabled>
+
+        <label for="user_color">Color favorito</label>
+        <input type="color" id="user_color" name="colorfav">
+
+      </fieldset>
+    </form>
+  </body>
 </html>
