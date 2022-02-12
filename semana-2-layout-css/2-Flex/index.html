@@ -12,60 +12,77 @@
     <form action="get">
       <fieldset>
         <legend>Personaliza tu hamburguesa</legend>
-        <p>Ingredientes</p>
-        <ul>
-          <li>
-            <label for="queso">Queso</label>
-            <input type="checkbox" name="queso" id="queso" />
-          </li>
-          <li>
-            <label for="pimiento">Pimiento</label>
-            <input type="checkbox" name="pimiento" id="pimiento" />
-          </li>
-          <li>
-            <label for="cebolla">Cebolla</label>
-            <input type="checkbox" name="cebolla" id="cebolla" />
-          </li>
-          <li>
-            <label for="jamon">Jamón</label>
-            <input type="checkbox" name="jamon" id="jamon" />
-          </li>
-          <li>
-            <label for="huevo">Huevo</label>
-            <input type="checkbox" name="huevo" id="huevo" />
-          </li>
-        </ul>
+        <fieldset>
+          <legend>Ingredientes</legend>
+          <ul>
+            <li>
+              <label for="queso">Queso</label>
+              <input type="checkbox" name="queso" id="queso" />
+            </li>
+            <li>
+              <label for="pimiento">Pimiento</label>
+              <input type="checkbox" name="pimiento" id="pimiento" />
+            </li>
+            <li>
+              <label for="cebolla">Cebolla</label>
+              <input type="checkbox" name="cebolla" id="cebolla" />
+            </li>
+            <li>
+              <label for="jamon">Jamón</label>
+              <input type="checkbox" name="jamon" id="jamon" />
+            </li>
+            <li>
+              <label for="huevo">Huevo</label>
+              <input type="checkbox" name="huevo" id="huevo" />
+            </li>
+          </ul>
+        </fieldset>
 
-        <p>Tamaño</p>
-        <ul>
-          <li>
-            <label for="small">Pequeña</label>
-            <input type="radio" id="small" name="tamano" />
-          </li>
-          <li>
-            <label for="medium">Mediana</label>
-            <input type="radio" id="medium" name="tamano" />
-          </li>
-          <li>
-            <label for="big">Grande</label>
-            <input type="radio" id="big" name="tamano" />
-          </li>
-        </ul>
+        <fieldset>
+          <legend>Tamaño</legend>
+          <ul>
+            <li>
+              <label for="small">Pequeña</label>
+              <input type="radio" id="small" name="tamano" />
+            </li>
+            <li>
+              <label for="medium">Mediana</label>
+              <input type="radio" id="medium" name="tamano" />
+            </li>
+            <li>
+              <label for="big">Grande</label>
+              <input type="radio" id="big" name="tamano" />
+            </li>
+          </ul>
+        </fieldset>
       </fieldset>
 
       <fieldset>
         <legend>Datos de entrega</legend>
         <label for="name">Nombre</label>
-        <input type="text" id="name" name="nombre" placeholder="Nombre" />
+        <input
+          type="text"
+          id="name"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
         <label for="address">Dirección</label>
         <input
           type="text"
           id="address"
           name="direccion"
           placeholder="Dirección"
+          required
         />
         <label for="phone">Teléfono</label>
-        <input type="tel" id="phone" name="numero" placeholder="Teléfono" />
+        <input
+          type="tel"
+          id="phone"
+          name="numero"
+          placeholder="Teléfono"
+          required
+        />
         <label for="instructions">Instrucciones especiales</label>
         <textarea
           name="instrucciones"

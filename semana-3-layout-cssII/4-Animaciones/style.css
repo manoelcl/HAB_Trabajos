@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  fill: gray;
+}
+
+.like {
+  animation-name: heartBeat;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes heartBeat {
+  25% {
+    transform: scale(145%);
+  }
+  50% {
+    transform: scale(100%);
+  }
+  75% {
+    transform: scale(125%);
+  }
+  100% {
+    fill: red;
+    transform: scale(100%);
+  }
+}
