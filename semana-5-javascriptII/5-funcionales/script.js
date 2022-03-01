@@ -39,3 +39,15 @@ const puntuaciones = [
     puntos: [2, 3, 3, 4],
   },
 ];
+
+puntuaciones.forEach((element) => {
+  (element.total = element.puntos.reduce((acc, num) => acc + num)), 0;
+});
+const puntuacionesSorted = puntuaciones.sort((a, b) => a.total - b.total);
+console.log(
+  `El equipo "${puntuaciones[0].equipo}" tiene la menor puntuación con ${
+    puntuaciones[0].total
+  } puntos.\nLa mayor puntuación es para el equipo "${
+    puntuaciones[puntuaciones.length - 1].equipo
+  }" con ${puntuaciones[puntuaciones.length - 1].total} puntos en total`
+);

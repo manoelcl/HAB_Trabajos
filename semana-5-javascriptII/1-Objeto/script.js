@@ -11,3 +11,11 @@ const people = {
   Irene: 23,
   Alex: 10,
 };
+
+for (const user in people) {
+  if (people[user] < 18) {
+    console.log(`${user} es menor de edad`);
+  } else {
+    console.log(`${user} es mayor de edad`);
+  }
+}
