@@ -15,12 +15,12 @@ const setAgePromise = (age) => {
 
   return new Promise((resolve, reject) => {
     if (age < 18) {
-      reject(new Error("Edad es menor"));
+      reject(new Error(`Edad ${age} es menor`));
     } else {
       //- Si la edad es par, la promesa se resolverá al cabo de un segundo con el mensaje "_edad_ es par".
       //- Si la edad es impar, la promesa se resolverá al cabo de dos segundos con el mensaje "_edad_ es impar".
       setTimeout(
-        () => resolve(`La edad es ${age % 2 === 0 ? "par" : "impar"}`),
+        () => resolve(`La edad ${age} es ${age % 2 === 0 ? "par" : "impar"}`),
         (age % 2 === 0 ? 1 : 2) * 1000
       );
     }
@@ -31,6 +31,8 @@ const setAgePromise = (age) => {
 
 //En caso de que sea rechazada, se mostrará de color rojo "Error: " y el mensaje correspondiente.
 
-setAgePromise(16)
-  .then((result) => console.log(result))
-  .catch((err) => console.error(`${err.name}: ${err.message}`));
+agePromise.then((promiseAge) => {
+  setAgePromise(promiseAge)
+    .then((result) => console.log(result))
+    .catch((err) => console.error(`${err.name}: ${err.message}`));
+});
