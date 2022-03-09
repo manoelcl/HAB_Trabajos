@@ -10,11 +10,13 @@ const catalogo = [
 ];
 
 function combinaciones(array) {
+  const catalogue = [];
   for (let i = 0; i < array.length; i++) {
     for (let j = i + 1; j < array.length; j++) {
-      console.log(`${catalogo[i]} y ${catalogo[j]}`);
+      catalogue.push(`${catalogo[i]} y ${catalogo[j]}`);
     }
   }
+  return catalogue;
 }
 
-combinaciones(catalogo);
+console.log(combinaciones(catalogo));

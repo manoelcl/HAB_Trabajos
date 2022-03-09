@@ -27,5 +27,4 @@ function cleanDuplicates(array) {
   }
   return compareArray;
 }
-names.push("hola");
-console.log(names);
+console.log(cleanDuplicates(names));

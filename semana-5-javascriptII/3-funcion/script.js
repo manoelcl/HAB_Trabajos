@@ -11,9 +11,14 @@ function checkPassword(password) {
     if (password === Number(numUser)) {
       alert(`You win!\nThe password was ${password}. Play another game.`);
       checkPassword(generatePassword());
-    } else if (--tries === 0) {
-      alert(`Game over!!\n the password was ${password}. Try again`);
-      checkPassword(generatePassword());
+    } else {
+      if (--tries === 0) {
+        alert(`Game over!!\n the password was ${password}. Try again`);
+        checkPassword(generatePassword());
+      }
+      alert(
+        `Fallo!\n la contraseña es ${password > +numUser ? "mayor" : "menor"} `
+      );
     }
   }
 }
