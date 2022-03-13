@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
