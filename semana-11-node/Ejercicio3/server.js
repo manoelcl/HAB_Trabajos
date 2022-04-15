@@ -17,6 +17,10 @@ app.get("/current-time", (req, res, next) => {
   const date = new Date();
   res.send(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 });
+app.get("/path", (req, res, next) => {
+  const path = __dirname;
+  res.send(`${path}`);
+});
 app.get("/force-error", (req, res, next) => {
   throw new Error("Error de prueba");
 });
