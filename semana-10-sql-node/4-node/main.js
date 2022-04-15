@@ -7,7 +7,7 @@ const name = () => (argv._[0] ? `, ${argv._[0]}` : "");
 value = prompt(`Hola${name()}. ¿Qué tal estás? RESPONDER: `);
 
 const checkResponse = (arg) => {
-  switch (value.toUpperCase()) {
+  switch (arg.toUpperCase()) {
     case "BIEN":
       console.log(`¡Me alegro${name()}!`);
       break;
@@ -25,4 +25,4 @@ const checkResponse = (arg) => {
   }
 };
 
-checkResponse(value);
+if (arg === "bien") checkResponse(value);
