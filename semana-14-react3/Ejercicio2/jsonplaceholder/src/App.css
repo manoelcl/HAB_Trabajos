@@ -1,0 +1,13 @@
+html {
+  background-color: black;
+  color: aliceblue;
+}
+article {
+  width: 300px;
+}
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
